@@ -8,8 +8,7 @@
   const L = window.SITE, I = window.I18N;
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  const urlLang = new URLSearchParams(location.search).get("lang");
-  const state = { lang: urlLang || localStorage.getItem("shesek-lang") || "he" };
+  const state = { lang: "en" };   // English-only site
   const t = (k) => (I[state.lang] && I[state.lang][k]) || k;
 
   /* ---------- inline SVG icons ---------- */
@@ -325,7 +324,6 @@
     if (location.search.indexOf("shot") !== -1) document.documentElement.classList.add("shot");
     renderStatic();
     applyI18n();
-    $("#langToggle").addEventListener("click", toggleLang);
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", drawSpine);
     buildSpine();

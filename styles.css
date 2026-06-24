@@ -176,7 +176,7 @@ html.lang-he .section-h{ font-weight:400; letter-spacing:0; }
 }
 .release-name{
   font-family:var(--f-display); font-weight:700; font-size:clamp(2.4rem,7vw,4rem);
-  line-height:1; color:var(--bone); direction:ltr;
+  line-height:1; color:var(--bone); direction:ltr; margin-bottom:26px;
   opacity:0; animation:rise .7s ease .6s forwards;
 }
 html.lang-he .release-name{ font-weight:400; }
@@ -407,8 +407,9 @@ html.shot .hero-social{ opacity:1 !important; animation:none !important; }
 @media (max-width:520px){
   .field-row{ flex-direction:column; }
   .field-sm{ max-width:none; }
-  .news-form{ flex-direction:column; }
-  .news-form input{ text-align:center; }
+  .news-form, .hero-news{ flex-direction:column; }
+  .news-form input, .hero-news input{ text-align:center; }
+  .hero-news .btn{ width:100%; }
   .show-row{ grid-template-columns:auto 1fr; gap:14px; }
   .footer-bottom{ flex-direction:column; }
 }
