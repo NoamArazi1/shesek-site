@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl" class="lang-he no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shesek · שסק</title>
+  <meta name="description" content="שסק — הרכב אינסטרומנטלי המשלב רוק פרוגרסיבי ואקספרימנטלי. שתי מערכות תופים, אלתור חי, התמסרות לצלילים." />
+  <meta name="theme-color" content="#14110E" />
+
+  <!-- Open Graph / שיתופים יפים באינסטה/וואטסאפ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Shesek · שסק" />
+  <meta property="og:description" content="Instrumental ensemble · Full release. Loss of reality. Surrender to sound." />
+  <meta property="og:image" content="assets/band.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo-bone.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Suez+One&family=Heebo:wght@300;400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <script>document.documentElement.classList.remove('no-js');</script>
+</head>
+<body>
+  <!-- טקסטורת גרעין אנלוגי -->
+  <div class="grain" aria-hidden="true"></div>
+  <!-- קו הדיו — עמוד שדרה של הגלילה -->
+  <svg class="spine" aria-hidden="true" preserveAspectRatio="none" viewBox="0 0 100 1000">
+    <path class="spine-path" d="" fill="none" />
+  </svg>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a href="#hero" class="nav-mark" aria-label="Shesek">
+      <img src="assets/logo-bone.png" alt="Shesek" />
+    </a>
+    <nav class="nav-links" aria-label="ניווט ראשי">
+      <a href="#music" data-i18n="nav.music">מוזיקה</a>
+      <a href="#shows" data-i18n="nav.live">הופעות</a>
+      <a href="#gallery" data-i18n="nav.gallery">גלריה</a>
+      <a href="#merch" data-i18n="nav.store">חנות</a>
+      <a href="#epk" data-i18n="nav.press">עיתונות</a>
+    </nav>
+    <button class="lang-toggle" id="langToggle" data-i18n="nav.lang" aria-label="Switch language">EN</button>
+  </header>
+
+  <main>
+    <!-- ============ HERO (A1) ============ -->
+    <section class="hero" id="hero">
+      <div class="hero-slides" id="heroSlides" aria-hidden="true"></div>
+      <div class="hero-veil" aria-hidden="true"></div>
+      <canvas class="hero-wave" id="heroWave" aria-hidden="true"></canvas>
+      <h1 class="hero-logo">
+        <img src="assets/logo-bone.png" alt="Shesek · שסק" id="heroLogo" />
+      </h1>
+      <a href="#music" class="hero-album">
+        <span class="hero-album-tag" data-i18n="hero.albumtag">אלבום חדש</span>
+        <span class="hero-album-name">Wow No!</span>
+      </a>
+      <div class="hero-cta">
+        <a href="#music" class="btn btn-fill" data-i18n="hero.listen">להאזנה</a>
+        <a href="#news" class="btn btn-ghost" data-i18n="hero.subscribe">להישאר מעודכנים</a>
+      </div>
+      <div class="hero-social" id="heroSocial"></div>
+    </section>
+
+    <!-- ============ MUSIC ============ -->
+    <section class="section music" id="music">
+      <h2 class="section-h reveal" data-i18n="music.heading">להאזנה</h2>
+      <p class="section-lead reveal" data-i18n="music.body"></p>
+      <div class="video-feature reveal" id="videoFeature"></div>
+      <div class="spotify-wrap reveal" id="spotifyWrap"></div>
+      <div class="music-links reveal" id="musicLinks"></div>
+    </section>
+
+    <!-- ============ SHOWS ============ -->
+    <section class="section shows" id="shows">
+      <h2 class="section-h reveal" data-i18n="shows.heading">לייב על הבמה</h2>
+      <div class="shows-list reveal" id="showsList"></div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section class="section gallery" id="gallery">
+      <h2 class="section-h reveal" data-i18n="gallery.track">גלריה</h2>
+      <div class="gallery-grid reveal" id="galleryGrid"></div>
+    </section>
+
+    <!-- ============ MERCH ============ -->
+    <section class="section merch" id="merch">
+      <h2 class="section-h reveal" data-i18n="merch.heading">חולצות שסק</h2>
+      <p class="section-lead reveal" data-i18n="merch.body"></p>
+      <div class="merch-grid">
+        <div class="merch-cards reveal" id="merchCards"></div>
+        <form class="order-form reveal" id="orderForm" novalidate>
+          <div class="field">
+            <label for="of-name" data-i18n="form.name">שם מלא</label>
+            <input id="of-name" name="name" type="text" required autocomplete="name" />
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="of-email" data-i18n="form.email">אימייל</label>
+              <input id="of-email" name="email" type="email" required autocomplete="email" />
+            </div>
+            <div class="field">
+              <label for="of-phone" data-i18n="form.phone">טלפון</label>
+              <input id="of-phone" name="phone" type="tel" autocomplete="tel" />
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="of-item" data-i18n="form.item">פריט</label>
+              <select id="of-item" name="item"></select>
+            </div>
+            <div class="field field-sm">
+              <label for="of-size" data-i18n="form.size">מידה</label>
+              <select id="of-size" name="size"></select>
+            </div>
+            <div class="field field-sm">
+              <label for="of-qty" data-i18n="form.qty">כמות</label>
+              <input id="of-qty" name="qty" type="number" min="1" value="1" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="of-notes" data-i18n="form.notes">הערות</label>
+            <textarea id="of-notes" name="notes" rows="2"></textarea>
+          </div>
+          <button type="submit" class="btn btn-fill" data-i18n="form.submit.order">שליחת הזמנה</button>
+          <p class="form-msg" id="orderMsg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT (מי אנחנו — למטה) ============ -->
+    <section class="section about" id="about">
+      <h2 class="section-h reveal" data-i18n="about.track">מי אנחנו</h2>
+      <p class="about-lead reveal" data-i18n="about.lead"></p>
+      <div class="about-text reveal">
+        <p data-i18n="about.body"></p>
+        <p class="about-origin" data-i18n="about.origin"></p>
+      </div>
+    </section>
+
+    <!-- ============ NEWSLETTER ============ -->
+    <section class="section news" id="news">
+      <div class="news-inner reveal">
+        <h2 class="section-h" data-i18n="news.heading">עדכונים ראשונים</h2>
+        <p class="section-lead" data-i18n="news.body"></p>
+        <form class="news-form" id="newsForm" novalidate>
+          <input id="news-email" name="email" type="email" required
+                 data-i18n-ph="news.placeholder" placeholder="האימייל שלכם" autocomplete="email" />
+          <button type="submit" class="btn btn-fill" data-i18n="news.submit">הרשמה</button>
+        </form>
+        <p class="form-msg" id="newsMsg" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <!-- ============ EPK ============ -->
+    <section class="section epk" id="epk">
+      <h2 class="section-h reveal" data-i18n="epk.heading">להזמנת הופעות</h2>
+      <p class="section-lead reveal" data-i18n="epk.body"></p>
+      <div class="epk-links reveal">
+        <a class="epk-card" href="assets/epk/shesek-presskit-2025.pdf" download>
+          <span class="epk-ico">↧</span>
+          <span data-i18n="epk.presskit">להורדת ערכת עיתונות</span>
+        </a>
+        <a class="epk-card" href="assets/band.jpg" download>
+          <span class="epk-ico">▣</span>
+          <span data-i18n="epk.photo">תמונה ברזולוציה גבוהה</span>
+        </a>
+        <a class="epk-card" id="bookingLink" href="#">
+          <span class="epk-ico">✉</span>
+          <span data-i18n="epk.booking">ליצירת קשר להופעות</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" id="footer">
+    <div class="footer-top">
+      <img class="footer-logo" src="assets/logo-bone.png" alt="Shesek" />
+      <p class="footer-tagline" data-i18n="footer.tagline"></p>
+    </div>
+    <div class="footer-cols">
+      <div class="footer-col">
+        <h3 data-i18n="footer.contact">יצירת קשר</h3>
+        <a id="footerEmail" href="#">shesek.band@gmail.com</a>
+        <a id="footerPhone" href="#">058-710-2010</a>
+      </div>
+      <div class="footer-col">
+        <h3 data-i18n="footer.follow">עקבו</h3>
+        <div class="footer-social" id="footerSocial"></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> Shesek · שסק. <span data-i18n="footer.rights">כל הזכויות שמורות.</span></span>
+      <span class="footer-credit" data-i18n="footer.credit">צילום: תומר רבינוביץ׳</span>
+    </div>
+  </footer>
+
+  <!-- ============ LIGHTBOX ============ -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="סגירה">×</button>
+    <div class="lightbox-content" id="lightboxContent"></div>
+  </div>
+
+  <script src="i18n.js"></script>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
