@@ -335,6 +335,7 @@
     initLightbox();
     handleForm($("#orderForm"), L.forms.order, $("#orderMsg"), "form.success.order");
     handleForm($("#newsForm"), L.forms.newsletter, $("#newsMsg"), "news.success");
+    handleForm($("#heroNewsForm"), L.forms.newsletter, $("#heroNewsMsg"), "news.success");
     onScroll();
   }
 

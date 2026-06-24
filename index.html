@@ -54,16 +54,23 @@
       <div class="hero-slides" id="heroSlides" aria-hidden="true"></div>
       <div class="hero-veil" aria-hidden="true"></div>
       <canvas class="hero-wave" id="heroWave" aria-hidden="true"></canvas>
-      <h1 class="hero-logo">
-        <img src="assets/logo-bone.png" alt="Shesek · שסק" id="heroLogo" />
-      </h1>
-      <a href="#music" class="hero-album">
+      <div class="hero-release">
+        <a class="release-cover" href="#music" aria-label="Listen to Wow No!">
+          <img src="assets/wow-no-cover.jpg" alt="Wow No! — Shesek" />
+          <span class="release-cover-play" aria-hidden="true">▶</span>
+        </a>
         <span class="hero-album-tag" data-i18n="hero.albumtag">אלבום חדש</span>
-        <span class="hero-album-name">Wow No!</span>
-      </a>
-      <div class="hero-cta">
-        <a href="#music" class="btn btn-fill" data-i18n="hero.listen">להאזנה</a>
-        <a href="#news" class="btn btn-ghost" data-i18n="hero.subscribe">להישאר מעודכנים</a>
+        <span class="release-name">Wow No!</span>
+        <p class="release-sub" data-i18n="hero.releasesub"></p>
+        <div class="hero-cta">
+          <a href="#music" class="btn btn-fill" data-i18n="hero.listen">להאזנה</a>
+        </div>
+        <form class="hero-news" id="heroNewsForm" novalidate>
+          <input id="hero-email" name="email" type="email" required
+                 data-i18n-ph="news.placeholder" placeholder="האימייל שלכם" autocomplete="email" />
+          <button type="submit" class="btn btn-ghost" data-i18n="news.submit">הרשמה</button>
+        </form>
+        <p class="form-msg hero-news-msg" id="heroNewsMsg" role="status" aria-live="polite"></p>
       </div>
       <div class="hero-social" id="heroSocial"></div>
     </section>
@@ -131,16 +138,6 @@
           <button type="submit" class="btn btn-fill" data-i18n="form.submit.order">שליחת הזמנה</button>
           <p class="form-msg" id="orderMsg" role="status" aria-live="polite"></p>
         </form>
-      </div>
-    </section>
-
-    <!-- ============ ABOUT (מי אנחנו — למטה) ============ -->
-    <section class="section about" id="about">
-      <h2 class="section-h reveal" data-i18n="about.track">מי אנחנו</h2>
-      <p class="about-lead reveal" data-i18n="about.lead"></p>
-      <div class="about-text reveal">
-        <p data-i18n="about.body"></p>
-        <p class="about-origin" data-i18n="about.origin"></p>
       </div>
     </section>
 

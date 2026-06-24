@@ -15,6 +15,7 @@ window.I18N = {
 
     /* hero */
     "hero.albumtag": "אלבום חדש",
+    "hero.releasesub": "האלבום השני · אוקטובר 2025",
     "hero.kicker": "הרכב אינסטרומנטלי",
     "hero.tagline.1": "שחרור מלא.",
     "hero.tagline.2": "אובדן תפיסת המציאות.",
@@ -106,6 +107,7 @@ window.I18N = {
     "nav.lang": "עב",
 
     "hero.albumtag": "New album",
+    "hero.releasesub": "Second album · October 2025",
     "hero.kicker": "Instrumental ensemble",
     "hero.tagline.1": "Full release.",
     "hero.tagline.2": "Loss of reality.",
